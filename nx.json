@@ -1,5 +1,5 @@
 {
-  "npmScope": "spc",
+  "npmScope": "mono",
   "affected": {
     "defaultBase": "master"
   },
@@ -12,9 +12,17 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "MjY3YWQwM2QtMmMzMC00NTc2LWI4OGYtYTZmMjg3MmQ3Y2VkfHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
       }
     }
   },
@@ -32,7 +40,9 @@
     },
     "main-e2e": {
       "tags": [],
-      "implicitDependencies": ["main"]
+      "implicitDependencies": [
+        "main"
+      ]
     }
   }
 }
